@@ -1,7 +1,5 @@
 package org.apache.jdbm;
 
-import sun.misc.Cleaner;
-
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;
@@ -120,11 +118,9 @@ class StorageDiskMapped implements Storage {
         b.put(data);
     }
 
-    private void unmapBuffer(MappedByteBuffer b) {
+    private void unmapBuffer(MappedByteBuffer b) throws IOException {
         if(b!=null){
-            Cleaner cleaner = ((sun.nio.ch.DirectBuffer) b).cleaner();
-            if(cleaner!=null)
-                cleaner.clean();
+            BufferCleaner.clean(b);
         }
     }
 

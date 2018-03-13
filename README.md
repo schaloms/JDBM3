@@ -15,6 +15,8 @@ There is no catch and no strings attached.
 
 News
 ====
+13th Mar 2018 - JDBM3 3.0.1 compatibility patch for Java 9, minimal required Java version is now 1.7.
+
 4th Sep 2012 - JDBM3 alpha4 was released. [Just bugfixes](https://groups.google.com/forum/?fromgroups=#!topic/jdbm/yBB4dLW54Pk)
 
 18st Aug 2012 - First version of JDBM4 is available on [GitHub](https://github.com/jankotek/JDBM4)
